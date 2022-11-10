@@ -1,6 +1,6 @@
 KDIR := $(HOME)/linux-5.4.222/kernel_out
 RUNDIR := $(PWD)
-export BUSYBOX := $(HOME)/qemu/initramfs/busybox
+export BUSYBOX := $(PWD)/busybox
 TESTDIR := $(PWD)/test
 
 MODULE := a2A hello
@@ -33,3 +33,5 @@ clean:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules clean
 	$(MAKE) -C $(TESTDIR) clean
 	$(RM) -f *.o *.mod.o *.mod.c *.symvers *.markers *.unsigned *.order
+	$(RM) -f $(RUNDIR)/initramfs.igz $(RUNDIR)/initramfs.cpio
+	$(RM) -rf $(BUSYBOX)/mod

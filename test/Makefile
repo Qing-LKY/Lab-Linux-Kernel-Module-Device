@@ -14,3 +14,4 @@ dir:
 
 clean:
 	$(RM) $(TEST_OUT)
+	$(RM) -rf $(BUSYBOX)/test_mod

@@ -17,3 +17,8 @@ compile_commands.json
 
 # clangd
 .clangd/
+
+# rootfs image
+initramfs.cpio
+initramfs.igz
+busybox/
